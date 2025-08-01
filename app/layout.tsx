@@ -21,6 +21,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </head>
       <body style={{
         margin: 0,
         padding: 0,
@@ -39,7 +42,7 @@ export default function RootLayout({
           <header style={{
             background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
             color: 'white',
-            padding: '2rem 4rem',
+            padding: '2rem 1rem',
             position: 'relative',
             overflow: 'hidden'
           }}>
@@ -55,20 +58,19 @@ export default function RootLayout({
             <div style={{ position: 'relative', zIndex: 1 }}>
               <div style={{
                 display: 'flex',
-                justifyContent: 'space-between',
-                alignItems: 'flex-start',
-                marginBottom: '1.5rem',
+                flexDirection: 'column',
+                gap: '1.5rem',
                 maxWidth: '1400px',
-                margin: '0 auto 1.5rem auto'
+                margin: '0 auto'
               }}>
-                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '2rem' }}>
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.5rem', textAlign: 'center' }}>
                   {/* ## REPLACE THIS DIV WITH YOUR PROFILE IMAGE ## */}
                   <img 
                     src="/profile.jpg" 
                     alt="Beth Pearson"
                     style={{
-                      width: '120px',
-                      height: '120px',
+                      width: '100px',
+                      height: '100px',
                       borderRadius: '50%',
                       objectFit: 'cover',
                       border: '3px solid rgba(255,255,255,0.3)',
@@ -78,7 +80,7 @@ export default function RootLayout({
                   <div>
                     <h1 style={{
                       margin: 0,
-                      fontSize: '2.5rem',
+                      fontSize: '2rem',
                       fontWeight: '700',
                       letterSpacing: '-0.02em',
                       marginBottom: '0.5rem'
@@ -87,7 +89,7 @@ export default function RootLayout({
                     </h1>
                     <p style={{
                       margin: 0,
-                      fontSize: '1.1rem',
+                      fontSize: '1rem',
                       opacity: 0.9,
                       fontWeight: '400'
                     }}>
@@ -95,7 +97,7 @@ export default function RootLayout({
                     </p>
                     <p style={{
                       margin: '0.5rem 0 0 0',
-                      fontSize: '0.95rem',
+                      fontSize: '0.9rem',
                       opacity: 0.8,
                       fontStyle: 'italic'
                     }}>
@@ -105,17 +107,18 @@ export default function RootLayout({
                 </div>
                 <div style={{
                   display: 'flex',
-                  gap: '0.75rem',
-                  flexWrap: 'wrap'
+                  gap: '0.5rem',
+                  flexWrap: 'wrap',
+                  justifyContent: 'center'
                 }}>
                   <a href="https://github.com/otmive" target="_blank" rel="noopener noreferrer" style={{
-                    padding: '0.5rem 1rem',
+                    padding: '0.5rem 0.75rem',
                     backgroundColor: 'rgba(255,255,255,0.2)',
                     color: 'white',
                     textDecoration: 'none',
                     borderRadius: '6px',
                     fontWeight: '500',
-                    fontSize: '0.9rem',
+                    fontSize: '0.85rem',
                     display: 'flex',
                     alignItems: 'center',
                     gap: '0.5rem',
@@ -125,13 +128,13 @@ export default function RootLayout({
                     <span>🐙</span> GitHub
                   </a>
                   <a href="https://www.linkedin.com/in/beth-pearson-6175b4161/" target="_blank" rel="noopener noreferrer" style={{
-                    padding: '0.5rem 1rem',
+                    padding: '0.5rem 0.75rem',
                     backgroundColor: 'rgba(255,255,255,0.2)',
                     color: 'white',
                     textDecoration: 'none',
                     borderRadius: '6px',
                     fontWeight: '500',
-                    fontSize: '0.9rem',
+                    fontSize: '0.85rem',
                     display: 'flex',
                     alignItems: 'center',
                     gap: '0.5rem',
@@ -141,13 +144,13 @@ export default function RootLayout({
                     <span>💼</span> LinkedIn
                   </a>
                   <a href="mailto:beth.pearson@bristol.ac.uk" style={{
-                    padding: '0.5rem 1rem',
+                    padding: '0.5rem 0.75rem',
                     backgroundColor: 'rgba(255,255,255,0.2)',
                     color: 'white',
                     textDecoration: 'none',
                     borderRadius: '6px',
                     fontWeight: '500',
-                    fontSize: '0.9rem',
+                    fontSize: '0.85rem',
                     display: 'flex',
                     alignItems: 'center',
                     gap: '0.5rem',
@@ -163,7 +166,7 @@ export default function RootLayout({
 
           <main style={{ 
             flex: '1 0 auto',
-            padding: '3rem 4rem',
+            padding: '2rem 1rem',
             backgroundColor: 'white',
             maxWidth: '1400px',
             margin: '0 auto',
@@ -175,18 +178,17 @@ export default function RootLayout({
           <footer style={{
             backgroundColor: '#1f2937',
             color: 'white',
-            padding: '2rem 4rem',
+            padding: '1.5rem 1rem',
             marginTop: 'auto',
             width: '100%'
           }}>
             <div style={{
               display: 'flex',
-              justifyContent: 'space-between',
-              alignItems: 'center',
-              flexWrap: 'wrap',
+              flexDirection: 'column',
               gap: '1rem',
               maxWidth: '1400px',
-              margin: '0 auto'
+              margin: '0 auto',
+              textAlign: 'center'
             }}>
               <div>
                 <p style={{ margin: 0, fontSize: '0.9rem', opacity: 0.8 }}>
@@ -199,7 +201,9 @@ export default function RootLayout({
               <div style={{
                 display: 'flex',
                 gap: '1rem',
-                alignItems: 'center'
+                alignItems: 'center',
+                justifyContent: 'center',
+                flexWrap: 'wrap'
               }}>
                 <a href="https://github.com/otmive" target="_blank" rel="noopener noreferrer" style={{
                   color: 'white',
