@@ -1,6 +1,9 @@
 import './globals.css';
 import { GeistSans } from 'geist/font/sans';
 import { GeistMono } from 'geist/font/mono';
+import Link from 'next/link';
+
+const highlightGreen = '#39ff14';
 
 export const metadata = {
   title: 'Beth Pearson - PhD Student on the Interactive AI CDT at Univeristy of Bristol',
@@ -54,7 +57,7 @@ export default function RootLayout({
               left: 0,
               right: 0,
               bottom: 0,
-              background: 'url("data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%234a9eff" fill-opacity="0.05"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")',
+              background: 'url("data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%2339ff14" fill-opacity="0.05"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")',
               opacity: 0.3
             }} />
             <div style={{ position: 'relative', zIndex: 1 }}>
@@ -77,7 +80,7 @@ export default function RootLayout({
                       height: '80px',
                       borderRadius: '50%',
                       objectFit: 'cover',
-                      border: '2px solid rgb(24, 211, 34)',
+                      border: `2px solid ${highlightGreen}`,
                       flexShrink: 0,
                       filter: 'sepia(0.3) contrast(1.2)'
                     }}
@@ -89,8 +92,7 @@ export default function RootLayout({
                       fontWeight: '700',
                       letterSpacing: '-0.02em',
                       marginBottom: '0.25rem',
-                      color: '#ffffff',
-                      textShadow: '0 0 5px rgba(74, 158, 255, 0.3)'
+                      color: '#ffffff'
                     }}>
                       Beth Pearson
                     </h1>
@@ -124,7 +126,7 @@ export default function RootLayout({
                   <a href="https://github.com/otmive" target="_blank" rel="noopener noreferrer" style={{
                     padding: '0.5rem 0.75rem',
                     backgroundColor: 'rgba(57, 255, 20, 0.1)',
-                    color: '#39ff14',
+                    color: highlightGreen,
                     textDecoration: 'none',
                     borderRadius: '4px',
                     fontWeight: '500',
@@ -133,14 +135,14 @@ export default function RootLayout({
                     alignItems: 'center',
                     gap: '0.5rem',
                     transition: 'all 0.2s ease',
-                    border: '1px solid #39ff14'
+                    border: `1px solid ${highlightGreen}`
                   }}>
                     <span>🐙</span> GitHub
                   </a>
                   <a href="https://www.linkedin.com/in/beth-pearson-6175b4161/" target="_blank" rel="noopener noreferrer" style={{
                     padding: '0.5rem 0.75rem',
                     backgroundColor: 'rgba(57, 255, 20, 0.1)',
-                    color: '#39ff14',
+                    color: highlightGreen,
                     textDecoration: 'none',
                     borderRadius: '4px',
                     fontWeight: '500',
@@ -149,14 +151,14 @@ export default function RootLayout({
                     alignItems: 'center',
                     gap: '0.5rem',
                     transition: 'all 0.2s ease',
-                    border: '1px solid #39ff14'
+                    border: `1px solid ${highlightGreen}`
                   }}>
                     <span>💼</span> LinkedIn
                   </a>
                   <a href="mailto:beth.pearson@bristol.ac.uk" style={{
                     padding: '0.5rem 0.75rem',
                     backgroundColor: 'rgba(57, 255, 20, 0.1)',
-                    color: '#39ff14',
+                    color: highlightGreen,
                     textDecoration: 'none',
                     borderRadius: '4px',
                     fontWeight: '500',
@@ -165,12 +167,65 @@ export default function RootLayout({
                     alignItems: 'center',
                     gap: '0.5rem',
                     transition: 'all 0.2s ease',
-                    border: '1px solid #39ff14'
+                    border: `1px solid ${highlightGreen}`
                   }}>
                     <span>📧</span> Email
                   </a>
                 </div>
               </div>
+              <nav style={{
+                display: 'flex',
+                gap: '0.75rem',
+                flexWrap: 'wrap',
+                maxWidth: '1400px',
+                margin: '1rem auto 0 auto'
+              }}>
+                {[
+                  { label: 'Home', href: '/' },
+                  { label: 'Research', href: '/research' },
+                  { label: 'Events', href: '/events' },
+                  { label: 'CV', href: '/CV_latest.pdf', target: '_blank' as const },
+                  { label: 'Blog', href: '/blog' },
+                ].map(({ label, href, target }) =>
+                  target ? (
+                    <a
+                      key={href}
+                      href={href}
+                      target={target}
+                      rel="noopener noreferrer"
+                      style={{
+                        padding: '0.45rem 0.85rem',
+                        backgroundColor: 'rgba(57, 255, 20, 0.08)',
+                        color: highlightGreen,
+                        textDecoration: 'none',
+                        borderRadius: '999px',
+                        border: `1px solid ${highlightGreen}`,
+                        fontSize: '0.85rem',
+                        fontWeight: '500'
+                      }}
+                    >
+                      {label}
+                    </a>
+                  ) : (
+                    <Link
+                      key={href}
+                      href={href}
+                      style={{
+                        padding: '0.45rem 0.85rem',
+                        backgroundColor: 'rgba(57, 255, 20, 0.08)',
+                        color: highlightGreen,
+                        textDecoration: 'none',
+                        borderRadius: '999px',
+                        border: `1px solid ${highlightGreen}`,
+                        fontSize: '0.85rem',
+                        fontWeight: '500'
+                      }}
+                    >
+                      {label}
+                    </Link>
+                  )
+                )}
+              </nav>
             </div>
           </header>
 
@@ -217,7 +272,7 @@ export default function RootLayout({
                 flexWrap: 'wrap'
               }}>
                 <a href="https://github.com/otmive" target="_blank" rel="noopener noreferrer" style={{
-                  color: '#4a9eff',
+                  color: highlightGreen,
                   textDecoration: 'none',
                   opacity: 0.8,
                   transition: 'opacity 0.2s ease'
@@ -226,7 +281,7 @@ export default function RootLayout({
                 </a>
                 <span style={{ opacity: 0.4, color: '#666666' }}>•</span>
                 <a href="https://www.linkedin.com/in/beth-pearson-6175b4161/" target="_blank" rel="noopener noreferrer" style={{
-                  color: '#4a9eff',
+                  color: highlightGreen,
                   textDecoration: 'none',
                   opacity: 0.8,
                   transition: 'opacity 0.2s ease'
@@ -235,7 +290,7 @@ export default function RootLayout({
                 </a>
                 <span style={{ opacity: 0.4, color: '#666666' }}>•</span>
                 <a href="mailto:beth.pearson@bristol.ac.uk" style={{
-                  color: '#4a9eff',
+                  color: highlightGreen,
                   textDecoration: 'none',
                   opacity: 0.8,
                   transition: 'opacity 0.2s ease'
