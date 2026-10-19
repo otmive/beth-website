@@ -27,7 +27,7 @@ export default function HomePage() {
               My research focuses on compositional generalisation in vision-language models, studying how well they can handle novel combinations of familiar concepts. I am also interested in how these models process complex ideas such as negation and spatial information and using interpretability methods to probe how these models work.
             </p>
             <p style={{ lineHeight: '1.7', marginBottom: '1.5rem', color: '#cccccc', fontSize: '1rem' }}>
-            From September to November 2023, I completed a 3-month internship developing a tool using LLMs to help radiologists identify meaningful differences in reports, supporting the training of junior doctors.
+            From September to November 2024, I completed a 3-month internship developing a tool using LLMs to help radiologists identify meaningful differences in reports, supporting the training of junior doctors.
             </p>
             <p style={{ lineHeight: '1.7', marginBottom: '1.5rem', color: '#cccccc', fontSize: '1rem' }}>
               Before starting my PhD, I completed my MEng in Engineering Mathematics at the University of Bristol. After graduating, I worked as a Software Engineer at Wilxite, where I built internal web applications for data management, invoicing, and other business operations. 
