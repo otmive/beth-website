@@ -23,7 +23,7 @@ export const eventsItems: EventItem[] = [
   {
     title: 'Best Poster at UK AI 2025',
     date: 'June 2025',
-    summary: 'Honored to receive the Best Poster Award at the UK AI 2025 Conference, where I presented work on using LLMs to evaluate radiology reports.',
+    summary: 'Honoured to receive the Best Poster Award at the UK AI 2025 Conference, where I presented work on using LLMs to evaluate radiology reports.',
   },
   {
     title: 'CVPR 2024 in Seattle',

@@ -1,4 +1,5 @@
 import { researchItems } from './researchItems';
+import ResearchCard from './ResearchCard';
 import { eventsItems } from './eventsItems';
 
 const highlightGreen = '#39ff14';
@@ -23,14 +24,24 @@ export default function HomePage() {
         }}>
           <div>
             <p style={{ lineHeight: '1.7', marginBottom: '1.5rem', color: '#cccccc', fontSize: '1rem' }}>
-              I'm a PhD student at the University of Bristol and part of the Interactive AI CDT. 
+              I'm a PhD student at the University of Bristol and part of the Interactive AI CDT.
               My research focuses on compositional generalisation in vision-language models, studying how well they can handle novel combinations of familiar concepts. I am also interested in how these models process complex ideas such as negation and spatial information and using interpretability methods to probe how these models work.
             </p>
-            <p style={{ lineHeight: '1.7', marginBottom: '1.5rem', color: '#cccccc', fontSize: '1rem' }}>
-            From September to November 2024, I completed a 3-month internship developing a tool using LLMs to help radiologists identify meaningful differences in reports, supporting the training of junior doctors.
+            <p style={{
+              lineHeight: '1.7',
+              marginBottom: '1.5rem',
+              color: '#ffffff',
+              fontSize: '1rem',
+              borderLeft: `4px solid ${highlightGreen}`,
+              paddingLeft: '1rem'
+            }}>
+              I'm currently writing up my thesis and looking for roles in machine learning research and applied AI. If you're hiring, I'd love to hear from you.
             </p>
             <p style={{ lineHeight: '1.7', marginBottom: '1.5rem', color: '#cccccc', fontSize: '1rem' }}>
-              Before starting my PhD, I completed my MEng in Engineering Mathematics at the University of Bristol. After graduating, I worked as a Software Engineer at Wilxite, where I built internal web applications for data management, invoicing, and other business operations. 
+            From September to November 2024, I completed a 3-month internship at Rosenfield Health, developing a tool using LLMs to help radiologists identify meaningful differences in reports, supporting the training of junior doctors. This work won the Best Poster Award at UK AI 2025 and was presented as an oral at ECAI 2025.
+            </p>
+            <p style={{ lineHeight: '1.7', marginBottom: '1.5rem', color: '#cccccc', fontSize: '1rem' }}>
+              Before starting my PhD, I completed my MEng in Engineering Mathematics at the University of Bristol. After graduating, I worked as a Software Developer at Wilxite, where I built internal web applications for data management, invoicing, and other business operations.
             </p>
             <p style={{ lineHeight: '1.7', color: '#cccccc', fontSize: '1rem' }}>
             Outside of research, you'll usually find me running, rock climbing, or at the local pub. I’m always open to interesting collaborations and good conversations about where AI is heading—feel free to reach out.
@@ -50,27 +61,7 @@ export default function HomePage() {
         </h2>
         <div className="work-grid">
           {researchItems.slice(0, 4).map((item) => (
-            <div
-              key={item.title}
-              style={{
-                border: '1px solid #333333',
-                padding: '2rem',
-                borderRadius: '8px',
-                backgroundColor: '#2a2a2a',
-                boxShadow: '0 4px 6px rgba(0,0,0,0.3)',
-                transition: 'transform 0.2s ease, box-shadow 0.2s ease'
-              }}
-            >
-              <h3 style={{ marginBottom: '1rem', color: highlightGreen, fontSize: '1.2rem' }}>
-                {item.title}
-              </h3>
-              <p style={{ color: '#999999', fontSize: '0.9rem', marginBottom: '1.5rem' }}>
-                <strong>Status:</strong> {item.status}
-              </p>
-              <p style={{ lineHeight: '1.7', color: '#cccccc', fontSize: '1rem' }}>
-                {item.summary}
-              </p>
-            </div>
+            <ResearchCard key={item.title} item={item} />
           ))}
         </div>
       </section>

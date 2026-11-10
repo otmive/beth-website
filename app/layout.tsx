@@ -6,13 +6,13 @@ import Link from 'next/link';
 const highlightGreen = '#39ff14';
 
 export const metadata = {
-  title: 'Beth Pearson - PhD Student on the Interactive AI CDT at Univeristy of Bristol',
-  description: 'Personal academic website of Beth Pearson, PhD student at University of Bristol researching Compositional Generalization in Vision-Language Models',
+  title: 'Beth Pearson - PhD Student on the Interactive AI CDT at University of Bristol',
+  description: 'Personal academic website of Beth Pearson, PhD student at University of Bristol researching Compositional Generalisation in Vision-Language Models',
   keywords: 'Beth Pearson, PhD student, computer science, vision-language models, compositional generalization, University of Bristol, AI research',
   author: 'Beth Pearson',
   openGraph: {
     title: 'Beth Pearson - PhD Student in Computer Science',
-    description: 'Researching Compositional Generalization in Vision-Language Models at University of Bristol',
+    description: 'Researching Compositional Generalisation in Vision-Language Models at University of Bristol',
     type: 'website',
   },
 };
@@ -30,11 +30,11 @@ export default function RootLayout({
       <body style={{
         margin: 0,
         padding: 0,
-        fontFamily: "'Courier New', 'Monaco', 'Menlo', monospace",
+        fontFamily: "var(--font-geist-sans), system-ui, sans-serif",
         backgroundColor: '#1a1a1a',
         color: '#e0e0e0',
         lineHeight: 1.5,
-        fontSize: '14px'
+        fontSize: '15px'
       }}>
         <div className="terminal-effect" style={{
           width: '100%',
@@ -112,7 +112,7 @@ export default function RootLayout({
                       fontStyle: 'italic',
                       color: '#999999'
                     }}>
-                      Researching Compositional Generalization in Vision-Language Models
+                      Researching Compositional Generalisation in Vision-Language Models
                     </p>
                   </div>
                 </div>
@@ -155,7 +155,7 @@ export default function RootLayout({
                   }}>
                     <span>💼</span> LinkedIn
                   </a>
-                  <a href="mailto:beth.pearson@bristol.ac.uk" style={{
+                  <a href="mailto:bethpearson98@gmail.com" style={{
                     padding: '0.5rem 0.75rem',
                     backgroundColor: 'rgba(57, 255, 20, 0.1)',
                     color: highlightGreen,
@@ -260,9 +260,6 @@ export default function RootLayout({
                 <p style={{ margin: 0, fontSize: '0.9rem', opacity: 0.8, color: '#cccccc' }}>
                   © {new Date().getFullYear()} Beth Pearson • University of Bristol
                 </p>
-                <p style={{ margin: '0.25rem 0 0 0', fontSize: '0.8rem', opacity: 0.6, color: '#999999' }}>
-                  Last updated: {new Date().toLocaleDateString()}
-                </p>
               </div>
               <div style={{
                 display: 'flex',
@@ -289,7 +286,7 @@ export default function RootLayout({
                   LinkedIn
                 </a>
                 <span style={{ opacity: 0.4, color: '#666666' }}>•</span>
-                <a href="mailto:beth.pearson@bristol.ac.uk" style={{
+                <a href="mailto:bethpearson98@gmail.com" style={{
                   color: highlightGreen,
                   textDecoration: 'none',
                   opacity: 0.8,

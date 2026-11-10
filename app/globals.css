@@ -22,11 +22,16 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: 'Courier New', 'Monaco', 'Menlo', monospace;
-  font-size: 14px;
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  font-size: 15px;
   line-height: 1.5;
   margin: 0;
   padding: 0;
+}
+
+/* Keep the terminal feel for headings and navigation */
+h1, h2, h3, h4, nav {
+  font-family: 'Courier New', 'Monaco', 'Menlo', monospace;
 }
 
 /* Old-school terminal effects */

@@ -82,10 +82,6 @@ export default function CvPage() {
               style={{ width: '100%', height: '100%', border: 0 }}
             />
           </div>
-
-          <p style={{ margin: '1rem 0 0 0', lineHeight: '1.6', color: '#999999', fontSize: '0.9rem' }}>
-            Place the file at <code style={{ color: '#cccccc' }}>/public/CV_latest.pdf</code>.
-          </p>
         </div>
       </section>
     </main>
